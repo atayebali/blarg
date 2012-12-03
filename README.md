@@ -1,4 +1,5 @@
 blarg
 =====
 
-having fun
+A learning tool for common algos.
+
