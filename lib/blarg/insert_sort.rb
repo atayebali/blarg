@@ -6,16 +6,16 @@ module Blarg
       @input = $stdin.gets.chomp
       run(@input)
     end
-    
+
     def run input
       nums = []
       input.split(" ").each {|n| nums << n.to_i}
       p nums
       p sort nums
     end
-    
+
     def sort nums
-      
-    end  
+      :numbers
+    end
   end
 end
