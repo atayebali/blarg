@@ -5,8 +5,13 @@ require_relative '../lib/blarg/insert_sort'
 describe "InsertSort" do
 
   it "should do get a  sort obj" do
-   is = Blarg::InsertSort.new([13, 32, 32])
-   is.should_not be_nil
+   numbers = []
+   100.times {numbers << rand(10000)}
+   is =  Blarg::InsertSort.new(numbers)
+   sorted_data = is.sort
+   (sorted_data.first < sorted_data.last).should be_true
+   p sorted_data
 
   end
+
 end
