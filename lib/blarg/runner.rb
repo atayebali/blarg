@@ -1,7 +1,4 @@
-#require 'optparse'
-require_relative 'linked_list'
-require_relative 'insert_sort'
-
+Dir["*.rb"].each {|file| require File.expand_path(file)}
 module Blarg
   class Runner
    

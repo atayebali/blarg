@@ -1,5 +1,4 @@
-require "rspec"
-require_relative '../lib/blarg/insert_sort'
+require 'spec_helper'
 
 
 describe "InsertSort" do
