@@ -2,6 +2,14 @@ module Blarg
   class MergeSort
     def initialize(input = nil)
       print <<-DOC
+      Divide and Conquer (and combine):
+
+      Divide unsorted list into 2 sub lists. Sort sub lists recursively until the list size is of 1.
+      Then it returns itself.
+
+      Combine the sublists back into form the main list (with sorted items.)
+
+      Analysis: O(nlogn) Average and Worst.
 
       DOC
 
@@ -15,16 +23,30 @@ module Blarg
     end
 
     def merge_sort(data = [])
-      middle_high = data.count/2
-      middle_low = middle - 1
-
-      merge_sort(data[0..middle])
-
-      merge_sort(data(middle+1..3))
+      @sorted_data = []
+      divide(data)
     end
 
-    private
+private
 
+    def divide(data)
+      return data if data.count <= 1
+      mid = data.count/2
+      floor =  mid - 1
+      ceiling = floor + 1
+      conq(divide(data[0..floor]), divide( data[ceiling..(data.count - 1)]  ))
+    end
 
+    def conq(one, two)
+      good = []
+      until one.empty? or two.empty? do
+        if one.first < two.first
+          good << one.shift
+        else
+          good << two.shift
+        end
+      end
+      good.concat(one).concat(two)
+    end
   end
 end
