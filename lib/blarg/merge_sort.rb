@@ -33,7 +33,7 @@ private
       return data if data.count <= 1
       mid = data.count/2
       floor =  mid - 1
-      ceiling = floor + 1
+      ceiling = mid
       conq(divide(data[0..floor]), divide( data[ceiling..(data.count - 1)]  ))
     end
 
