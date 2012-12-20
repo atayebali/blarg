@@ -7,9 +7,13 @@ module Blarg
       Divide unsorted list into 2 sub lists. Sort sub lists recursively until the list size is of 1.
       Then it returns itself.
 
-      Combine the sublists back into form the main list (with sorted items.)
+      Combine the sub-lists back into form the main list (with sorted items.)
 
-      Analysis: O(nlogn) Average and Worst.
+      Analysis: O(n log n) Average and Worst.
+
+      Although it is O(n log n) it requires a lot of space for merges.
+
+      Best when done as external sort or tape drives.  Random Access to such systems is slow. But once you land in the right place
 
       DOC
 
