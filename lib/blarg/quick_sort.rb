@@ -43,9 +43,7 @@ module Blarg
 
     def partition(data, low, high, pivot)
       pivot_value = data[pivot]
-
       swap(data,high, pivot)
-
       store_index = low
 
       low.upto(high-1) do |i|
