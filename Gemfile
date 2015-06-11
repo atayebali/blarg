@@ -1,4 +1,4 @@
 source 'http://rubygems.org'
-ruby '1.9.3'
 
-gem 'rspec'
+
+gem 'rspec', '2.9.0'
