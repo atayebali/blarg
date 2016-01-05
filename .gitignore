@@ -14,5 +14,5 @@ test/version_tmp
 .ruby-version
 
 tmp
-
+.ruby-version
 .rvmrc
