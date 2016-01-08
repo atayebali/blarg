@@ -17,4 +17,35 @@ describe Blarg::NonRepeated do
     c = Blarg::NonRepeated.reverse("This is a good statement. Right?")
     c.should eql "Right? statement. good a is This"
   end
+
+  it "creates ints from strings" do
+    c = Blarg::NonRepeated.to_int "367"
+    c.should eql 367
+  end
+
+  it "creates ints from strings with negatives" do
+    c = Blarg::NonRepeated.to_int "-367"
+    c.should eql -367
+  end
+
+  it "creates ints from strings with negatives" do
+    c = Blarg::NonRepeated.to_int "0"
+    c.should eql 0
+  end
+
+  it "creates str from ints" do
+    c = Blarg::NonRepeated.to_str 367
+    c.should eql "367"
+  end
+
+  it "creates str from ints with negatives" do
+    c = Blarg::NonRepeated.to_str -367
+    c.should eql "-367"
+  end
+
+  it "handles 0 properly" do
+    c = Blarg::NonRepeated.to_str 0
+    c.should eql "0"
+  end
+
 end
